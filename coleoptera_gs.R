@@ -4,3 +4,4 @@ library(tidyverse)
 df <- read_csv("insectgs.csv") %>%
   filter(Order == "Coleoptera")
 # export a csv
+write.csv(df$Name, "coleoptera_species.csv", row.names = FALSE)
